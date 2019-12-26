@@ -1,0 +1,18 @@
+ .error{
+ 	color: red;
+ 	font-size: 11px;
+ 	display: block;
+ }
+
+ .search{
+ 	display: inline;
+ 	padding: 5px;
+
+ }
+
+ .result_layout {
+	 border: 1px solid rgb(105, 128, 0);
+	 background-color: rgb(100, 128, 0);
+	 font: white;
+	 height: 30px
+ }

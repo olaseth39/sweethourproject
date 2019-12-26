@@ -1,0 +1,170 @@
+/*for order by calling*/
+
+.rowcolor{
+	background-color: orange;
+}
+
+.fontcolor1{
+	color:silver;
+	text-align: right;
+}
+
+.alignback{
+	text-align: right;
+	/*border:2px solid white;*/
+	/*border-radius: 15px;*/
+	margin-top: 20px;
+	vertical-align: bottom;
+}
+
+/*for sweetlogo*/
+
+#formatlogo{
+	width:150px;
+	height:100px;
+}
+
+.callfont{
+	color: orange;
+	font-size: 20px;
+	margin-top: 30px;
+}
+
+#formatimage1{
+	width: 300px;
+	height:700px;
+}
+
+.addmargin1{
+	margin-left: 650px;
+	/*text-align: left;*/
+}
+
+.addmargin2{
+	margin-left: 650px;
+}
+
+.addmargin3{
+	margin-left: 680px;
+}
+
+.addmargin4{
+	margin-left: 670px;
+}
+
+.addmargin5{
+	margin-left: 680px;
+}
+
+.addmargin6{
+	margin-left: 678px;
+}
+
+.rowbgcolor{
+	background-color: rgba(195,195,195,0.1);
+	/*margin-top: 50px;*/
+}
+
+.givcolor{
+	color: red;
+}
+
+/*design for order*/
+
+.orderimagesize{
+	width: 570px;
+	height:100%px;
+
+
+}
+
+#removetextdeco{
+	text-decoration: none;
+}
+
+.orderfont{
+	font-size: 60px;
+	text-decoration: none;
+	color:white;
+	font-family: arial;
+}
+/*.makefixed{
+	position: fixed;
+	top: 0px;
+}*/
+
+/*design for order online*/
+
+#givcolor{
+	color: white;
+	background-color: orange;
+	padding: 10px;
+
+}
+
+#alignback7{
+	margin-right: 10px;
+}
+
+#givbgcolor{
+	background-color: rgba(0,0,0,0.6);
+	color: white;
+	padding: 10px;
+}
+
+.mySlides{
+	width:768px;
+	height:300px;
+}
+
+.givmargin{
+	margin: 20px;
+}
+
+.givmarginleft{
+	margin-left: 40px;
+	position: fixed;
+	left: 900px;
+}
+
+.snacksbgcolor{
+	background-color: rgba(0,0,0,0.6);
+	padding-right: 15px;
+}
+
+.givpad{
+	padding:10px;
+	color: white;
+
+}
+
+.orderimage{
+	width: 200px;
+	height:200px;
+	margin-right: 5px;
+}
+
+.givmarginbetweenimage{
+	margin-right: 5px;
+}
+
+/*#snacks{
+	position: fixed;
+}
+*/
+
+#cateringimage{
+	width: 800px;
+	height: 500px;
+}
+
+.error{
+ 	color: red;
+ 	font-size: 11px;
+ 	display: block;
+ }
+
+ .error{
+ 	color: red;
+ 	display: block;
+ }

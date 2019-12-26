@@ -1,0 +1,253 @@
+.bgcolo{
+	background-color: rgba(0,255,0,0.5);
+	height:80px;
+	width: 100%;
+	
+	/*position: fixed;*/
+	padding-top: 10px;
+	margin-top: 10px;
+	/*top:0;*/
+
+	/*width:100%;*/
+}
+ 
+ a{
+ 	text-decoration: none;
+ }
+
+.round{
+	border:2px solid white;
+	border-radius: 15px;
+	display: inline;
+	padding:10px;
+	color: white;
+	font-size: 50px;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+ li{
+	display: inline;
+	/*vertical-align: bottom;*/
+	color:white;
+	font-size: 50px;
+	margin: 20px;
+	
+}
+li a:hover{
+	background-color: rgba(255,0,0);
+
+}
+li a:active{
+	color: white;
+}
+
+/*second row*/
+
+/*.firstcol{
+	border:0px solid black;
+	/*height:500px;*/
+	/*padding:40px;*/*/
+}
+.secondcol{
+	border:0px solid black;
+	height:500px;
+}
+.addmargin{
+	/*margin-top: 50px; */
+}
+/*first column*/
+.carouselimagesize{
+	width:100%;
+	height:800px;
+}
+.colored{
+	color:red;
+	font-size: 30px;
+}
+/*body{
+	background-color: rgba(195,195,195,0.3);
+}*/
+.sweetfont{
+	color:black;
+	text-transform: uppercase;
+	font-size: 40px;
+	font-family: ariel;
+
+}
+@font-face{
+	font-family: Alegreya-BoldItalic; AlegreyaSans-ExtraBold:;
+	src: url('fontfolder/AlegreyaSans-ExtraBold.ttf');
+	}
+#colored{
+	color:orange;
+	font-family: Forte;
+	font-size: 30px; 
+}
+.colored1{
+	color:rgb(255,128,0);
+	font-family: arial;
+	font-size: 30px;
+	text-align: center;
+}
+
+.btn{
+	text-align: center;
+	font-size: 30px;
+	margin-left: 200px;
+
+}
+
+#removeline{
+	text-decoration: none;
+}
+
+
+/*location for delivery*/
+.round1{
+	border:1px solid rgb(255,128,0);
+	border-radius: 15px;
+	padding:  10px;
+	width:70px;
+	color:rgb(255,128,0);
+}
+.round2{
+	border:1px solid rgb(255,128,0);
+	border-radius: 15px;
+	padding:10px;
+	width:100px;
+	text-align: center;
+	color:rgb(255,128,0);
+}
+.round3{
+	border:1px solid rgb(255,128,0);
+	border-radius: 15px;
+	padding:10px;
+	width:150px;
+	text-align: center;
+	color:rgb(255,128,0);
+}
+.round3 a{
+	color:rgb(255,128,0);
+}
+.round2 a{
+	color:rgb(255,128,0);
+} 
+.round1 a{
+	color:rgb(255,128,0);
+}
+/*3rd row*/
+.number{
+	font-size: 50px;
+	color:rgb(255,128,0);
+	text-align:center; 
+	font-family: Felix Titling;
+}
+.putcenter{
+	text-align: center;
+}
+.putcenter2{
+	text-align: center;
+	/*color:rgb(255,128,0);*/
+}
+.bgcolor3{
+	border:0px solid black;
+	background-color:rgba(153,217,234,0.4);
+}
+.bgprop1{
+	border:0px solid black;
+}
+img{
+	width:100%;
+	height:300px;
+	/*margin: 50px;*/
+}
+
+/*about Us page-break-inside: */
+.imagewidth{
+	width:900px;
+	border:0px solid black;
+	height:650px;
+}
+.makered{
+	color:orange;
+	font-size: 30px; 
+}
+.changefont{
+	font-size: 20px;
+	margin: 20px;
+}
+#frontoffice{
+	width: 100%;
+	height: 350px;
+	margin-left: 25px;
+}
+.footer{
+	margin-top:52px;
+	padding-top:16px;
+	width:860px;
+	font-family:ariel; 
+	border-top:1px solid #3a94ae; 
+}
+.content{
+	margin-top: 52px;
+}
+
+.dropdown{
+	margin-top:52px;
+ 
+}
+
+#increasefont1{
+	font-size: 30px;
+	border-color: orange;
+
+}
+
+/*.putmargintop{
+	margin-top: 52px; 
+}*/
+.putorange{
+	color:orange;
+}
+
+/*design for outdoor catering*/
+
+.formatLi{
+	border:2px solid white;
+	border-radius: 15px;
+	display: inline;
+	padding:10px;
+	color: orange;
+	font-size: 15px;
+	text-transform: uppercase;
+	text-decoration: none;
+	margin: 0px;	
+}
+
+#largefont{
+	font-size: 16px;
+
+}
+
+#cateringimage2{
+	width: 1200px;
+	height: 500px;
+}
+
+#sweetlogo{
+	width:250px;
+	height: 250px;
+}
+
+#frontmargin{
+	margin-left: 25px;
+}
+
+
+#eventcenter{
+	margin-left: 30px;	
+}
+
+.footercolor{
+	background-color: rgba(0,0,0,0.5);
+}
