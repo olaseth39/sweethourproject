@@ -115,3 +115,44 @@
 
 	limit : $('.limit').val(),
 						offset : $('.offset').val()
+
+						$(document).on('click', '.pagination_link',function(){
+				var page = $(this).attr('id');
+				load_page_details(page);
+			})
+
+
+
+
+			<script>
+		$(document).ready(function(){
+			function load_page_details(id,page){
+				$.post('fetch.php',
+					{
+						id   : id,
+						page : page,
+					},
+					function(data){
+						$('.page_details').html(data)
+					}
+				)
+			};
+			// initiate the load_page_details function, 1 is the default id number
+			load_page_details(1,1)
+			$(".nav li").click(function(){
+				//alert('my name')
+				var page_id = $(this).attr("id");
+				load_page_details(page_id);
+			});
+
+			//for pagination
+			$(document).on('click', '.pagination_link',function(){
+				var page = $(this).attr('id');
+				alert(page);
+				load_page_details(page);
+			})
+		})
+			// create the the event when the li is clicked
+			
+	</script>
+ 	

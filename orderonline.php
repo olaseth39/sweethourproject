@@ -1,12 +1,12 @@
 <?php
 include('header2.php');
 include('header3.php');
+session_start();
+$_SESSION['total_page'];
 ?>
 
 <!-- Pagination -->
 <!-- pagination	 -->
-
-
 	
 	<div class="row givmargin">
         <!-- Side bar here -->
@@ -35,20 +35,29 @@ include('header3.php');
                 </ul>
         </div>
 		
-
 		<div class="col-md-9">
 			<p class="page_details"></p>
-		</div>
-        
-     </div>  			
-	<!-- Load the content of the sidebar assynchronously -->
-	<script type="text/javascript" src="bootstrap/js/jquery.min.js"></script>
+			<!-- Load the content of the sidebar assynchronously -->			
+	        <div >
+					<?php
+					
+					   for($page = 1 ;$page <= $_SESSION['total_page']; $page++){
+					?>
+						<span class='pagination_link' style='cursor:pointer; padding:6px; border:1px solid black;' id="<?php echo $page;?>">
+						<?php echo $page ?></span>
+					<?php	
+						}
+					?>
+			</div>	
+	    </div>
+     </div> 
+	 <script type="text/javascript" src="bootstrap/js/jquery.min.js"></script>
 	<script>
 		$(document).ready(function(){
 			function load_page_details(id){
 				$.post('fetch.php',
 					{
-						id : id,
+						id   : id,
 					},
 					function(data){
 						$('.page_details').html(data)
@@ -64,15 +73,31 @@ include('header3.php');
 			});
 
 			//for pagination
+			function load_pagination(page){
+				//load_pagination(1)
+				$.post('fetchPagination.php',
+					{
+						page   : page,
+					},
+					function(data){
+						$('.page_details').html(data)
+					}
+				)
+			};
+			// initiate the load_pagination function, 1 is the default page number
+			load_pagination(1)
+			// I stopped the initiation so as not to interrupt the load_page_details until the page link is clicked
 			$(document).on('click', '.pagination_link',function(){
 				var page = $(this).attr('id');
-				load_page_details(page);
+				alert(page);
+				load_pagination(page);
 			})
+			//load_pagination(1)
 		})
 			// create the the event when the li is clicked
 			
 	</script>
-
+ 			
 <br><br><br>				
 <?php include('footer.php');?>	
 
