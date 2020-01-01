@@ -74,8 +74,6 @@
 .orderimagesize{
 	width: 570px;
 	height:100%px;
-
-
 }
 
 #removetextdeco{
@@ -139,9 +137,9 @@
 }
 
 .orderimage{
-	width: 200px;
-	height:200px;
-	margin-right: 5px;
+	width: 150px;
+	height:150px;
+	margin-right: 3px;
 }
 
 .givmarginbetweenimage{

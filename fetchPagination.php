@@ -23,7 +23,7 @@ session_start();
 		//<?php
 //the value of $limit and $result_per_page are below in the pagination section
 	//1.define how many results you want per page
-	$result_per_page = 6;
+	$result_per_page = 9;
 	//2.Find out the number of results stored in the db
 	$query = "SELECT * FROM product 
 			 WHERE productcategoryId = '".$_SESSION['post_id']."'
@@ -63,7 +63,7 @@ session_start();
 		if(!mysqli_query($con,$sql)){
 			echo "Error: ". mysqli_error($con); 
 		}
-			$result = mysqli_query($con,$sql);
+		$result = mysqli_query($con,$sql);
 			$row = mysqli_fetch_all($result, MYSQLI_BOTH);
 
 			//pagination starts here
@@ -71,45 +71,31 @@ session_start();
 		$numcol = 3;
 		$bootstrapcolwidth = 12/$numcol;
 		$arraychunk = array_chunk($row,$numcol);
-		//$output = '';
-		//7.display the links to the pages
-		
 				foreach($arraychunk as $products){
 ?>	
-		<!-- Not	e that the beginning of this row is in header3 -->
+		<!-- Note that the beginning of this row is in header3 -->
 		<div class="col-md-<?php echo $bootstrapcolwidth; ?> img-responsive">
 				<!-- <h2 style="text-align:center";>Products...</h2> -->
-				<!-- <span id="page_details"></span> -->
 				<?php
 				//iterate through each product in each chunk
 					foreach($products as $product){
 				?>
 				<img src="images/<?php echo $product['picture']?>"  class=" orderimage">
-				<h4 style="margin:20px"><?php echo $product['productName']?> </h4><b>&#8358;
-				<i><?php echo $product['unitPrice']?></i></b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				<!-- <button class="btn btn-danger"><a href="<?php //echo $product['href'] ?>">Add to Cart</a></button> -->
-				<button class="btn btn-primary"><a href="addtocart.php?id=<?php echo $product['productId'] ;?>">Add</a></button>
-			
+				<h4 style="margin:20px"><?php echo $product['productName']?> </h4>
+				<h4><b>&#8358;<i><?php echo $product['unitPrice']?></i></b> &nbsp;&nbsp;
+				    <input type="button" name="submit" value="Add <?php echo $counter ?> to cart" class="btn btn-success">
+				</h4>
+				<!-- <input type="text" name="quantity" class="form-control" value="1"> -->
+				<input type="hidden" name="hidden_name" value="<?php echo $product['productName'] ?>">
+				<input type="hidden" name="hidden_price" value="<?php echo $product['unitPrice']?>">
+				
+			     <br>
 				<?php 
-						} 
-							
+					} 			
 				?>
+				<br>
 			</div>
 			<?php 	
-						}
-						
-			//6.retrieve the sql limit starting number for the results on the displaying page
-	        //already written up in the beginning
-	        //echo $starting_limit_number;
-			//echo $result_per_page;
-			//Try using a seperate query for he pagination
-			// if(isset($_POST['id'])){
-			// 	$page_query = "SELECT * FROM product 
-			// 	WHERE productCategoryId = '".$_POST['id']."' 
-			// 	AND $page = '".$_POST['page']."' 
-			// 	LIMIT $starting_limit_number,$result_per_page
-			// 	";
-				
-			// }
-			
-?>
+					}	
+?>			
+		

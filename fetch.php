@@ -25,47 +25,49 @@ session_start();
 	
 	$sql = "SELECT * FROM product 
 		WHERE productcategoryId = '".$_POST['id']."'
-		LIMIT 6
+		LIMIT 9
 		";
 		//var_dump($sql);
 		if(!mysqli_query($con,$sql)){
 			echo "Error: ". mysqli_error($con); 
 		}
-			$result = mysqli_query($con,$sql);
-			$row = mysqli_fetch_all($result, MYSQLI_BOTH);
+		$result = mysqli_query($con,$sql);
+		$row = mysqli_fetch_all($result, MYSQLI_BOTH);
 
-			//pagination starts here
-			//pagination ends here
-		$numcol = 3;
-		$bootstrapcolwidth = 12/$numcol;
-		$arraychunk = array_chunk($row,$numcol);
-		//$output = '';
-		//7.display the links to the pages
-		
-					foreach($arraychunk as $products){
+		//pagination starts here
+		//pagination ends here
+	$numcol = 3;
+	$bootstrapcolwidth = 12/$numcol;
+	$arraychunk = array_chunk($row,$numcol);
+			foreach($arraychunk as $products){
 ?>	
-		<!-- Not	e that the beginning of this row is in header3 -->
-		<div class="col-md-<?php echo $bootstrapcolwidth; ?> img-responsive">
-				<!-- <h2 style="text-align:center";>Products...</h2> -->
-				<!-- <span id="page_details"></span> -->
-				<?php
-				//iterate through each product in each chunk
-					foreach($products as $product){
-				?>
-				<img src="images/<?php echo $product['picture']?>"  class=" orderimage">
-				<h4 style="margin:20px"><?php echo $product['productName']?> </h4><b>&#8358;
-				<i><?php echo $product['unitPrice']?></i></b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				<!-- <button class="btn btn-danger"><a href="<?php //echo $product['href'] ?>">Add to Cart</a></button> -->
-				<button class="btn btn-primary"><a href="addtocart.php?id=<?php echo $product['productId'] ;?>">Add</a></button>
-			
-				<?php 
-						} 
-							
-				?>
-			</div>
-			<?php 	
-						}
+	<!-- Note that the beginning of this row is in header3 -->
+	<div class="col-md-<?php echo $bootstrapcolwidth; ?> img-responsive">
+			<!-- <h2 style="text-align:center";>Products...</h2> -->
+			<?php
+			//iterate through each product in each chunk
+				foreach($products as $product){
+			?>
+			<img src="images/<?php echo $product['picture']?>"  class=" orderimage">
+			<h4 style="margin:20px"><?php echo $product['productName']?> </h4>
+			<h4><b>&#8358;<i><?php echo $product['unitPrice']?></i></b> &nbsp;&nbsp;
+				<input type="button" name="submit" value="Add <?php echo $counter ?> to cart" class="btn btn-success">
+			</h4>
+			<!-- <input type="text" name="quantity" class="form-control" value="1"> -->
+			<input type="hidden" name="hidden_name" value="<?php echo $product['productName'] ?>">
+			<input type="hidden" name="hidden_price" value="<?php echo $product['unitPrice']?>">
+			<!-- <input type="button" name="submit" value="Add to cart" class="btn btn-success"> -->
+			 <br>
+			<?php 
+					} 
+						
+			?>
+			<br>
+		</div>
+		<?php 	
+					}
+		
+?>			
 								
-?>
       
 	

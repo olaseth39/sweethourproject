@@ -37,19 +37,22 @@ $_SESSION['total_page'];
 		
 		<div class="col-md-9">
 			<p class="page_details"></p>
-			<!-- Load the content of the sidebar assynchronously -->			
-	        <div >
-					<?php
+			<!-- Load the content of the sidebar assynchronously -->
+			<br>				
+		</div>
+		<div class="col-md-12">
+		     <div style="text-align:center";>
+			    <?php
 					
-					   for($page = 1 ;$page <= $_SESSION['total_page']; $page++){
-					?>
-						<span class='pagination_link' style='cursor:pointer; padding:6px; border:1px solid black;' id="<?php echo $page;?>">
-						<?php echo $page ?></span>
-					<?php	
-						}
-					?>
-			</div>	
-	    </div>
+					for($page = 1 ;$page <= $_SESSION['total_page']; $page++){
+				 ?>
+					 <span class='pagination_link' style='cursor:pointer; padding:6px; border:1px solid black;' id="<?php echo $page;?>">
+					 <?php echo $page ?></span>
+				 <?php	
+					 }
+				 ?>
+			 </div>		
+		</div>
      </div> 
 	 <script type="text/javascript" src="bootstrap/js/jquery.min.js"></script>
 	<script>

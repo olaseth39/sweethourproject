@@ -126,3 +126,53 @@ session_start();
 	   <input type="hidden" name="total_page_available" value="<?php echo $total_page_available ?>">
 	</div>	<!--fifth row ends -->
 	
+
+
+	$result = mysqli_query($con,$sql);
+			$row = mysqli_fetch_all($result, MYSQLI_BOTH);
+
+			//pagination starts here
+			//pagination ends here
+		$numcol = 3;
+		$bootstrapcolwidth = 12/$numcol;
+		$arraychunk = array_chunk($row,$numcol);
+				foreach($arraychunk as $products){
+?>	
+		<!-- Note that the beginning of this row is in header3 -->
+		<div class="col-md-<?php echo $bootstrapcolwidth; ?> img-responsive"
+		        style="border:1px solid #133;
+					   background-color: #f1f1f1;
+					   border-radius   : 5px;
+					   padding         : 16px;
+					   text-align      : center;
+					   "
+		        >
+				<!-- <h2 style="text-align:center";>Products...</h2> -->
+				<?php
+				//iterate through each product in each chunk
+					foreach($products as $product){
+				?>
+				<img src="images/<?php echo $product['picture']?>"  class=" orderimage">
+				<h4 style="margin:20px"><?php echo $product['productName']?> </h4><b>&#8358;
+				<h4>&#8358;<i><?php echo $product['unitPrice']?></i></b></h4>
+				<input type="text" name="quantity" class="form-control" value="1">
+				<input type="hidden" name="hidden_name" value="<?php echo $product['productName'] ?>">
+				<input type="hidden" name="hidden_price" value="<?php echo $product['unitPrice']?>">
+				<input type="button" name="submit" value="Add to cart" class="btn btn-success">
+			     <br>
+				<?php 
+						} 
+							
+				?>
+				<br>
+			</div>
+			<?php 	
+						}
+			
+?>		
+style="border:1px solid #133;
+				   background-color: #f1f1f1;
+				   border-radius   : 5px;
+				   padding         : 16px;
+				   text-align      : center;
+				   "	
