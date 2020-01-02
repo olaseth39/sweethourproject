@@ -45,14 +45,24 @@ include('config.php');
 					<a href="index.php">Home</a>
 				</div>
 			</div> <!-- first row ends -->
-			<br>
 
 			<div class="row">
-
-				<div class="col-md-5">
+			<br>
+				<div class="col-md-7">
 					<img src="images/sweethourlogo.png" id="formatlogo">
+			       <div class="col-md-12" style="background-color: yellow;line-height:35px">
+                       Please Note that any Item(s) ordered, would be delivered within 24 hours of delivery hours.
+                   </div>
 				</div>
-				<div class="col-md-1">
+				<div class="col-md-2">							
+				</div>
+				<div class="col-md-3 givmarginleftremove">
+                   <div id="givcolor">Your Order&nbsp;&nbsp;<span id="alignback7">0</span>&nbsp;Selected<br></div>
+                   <p id="givbgcolor">Your order is empty.<br>Select from the menu box to get started</p>
+                </div>
+            </div> <!-- 3rd row ends -->
+        </div>
+				<!-- <div class="col-md-1">
 					<span class="givcolor"><a href="#snacks">Snacks</a></span>
 				</div>
 				<div class="col-md-1">
@@ -69,5 +79,5 @@ include('config.php');
 				</div>
 				<div class="col-md-1">
 					<span class="givcolor"><a href="#drink">Drinks</a></span>
-				</div>
+				</div> -->
 			</div>

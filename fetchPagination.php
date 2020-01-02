@@ -82,9 +82,12 @@ session_start();
 				?>
 				<img src="images/<?php echo $product['picture']?>"  class=" orderimage">
 				<h4 style="margin:20px"><?php echo $product['productName']?> </h4>
-				<h4><b>&#8358;<i><?php echo $product['unitPrice']?></i></b> &nbsp;&nbsp;
-				    <input type="button" name="submit" value="Add <?php echo $counter ?> to cart" class="btn btn-success">
-				</h4>
+				<h4><b>&#8358;<i><?php echo $product['unitPrice']?></i></b> &nbsp;
+				<input type="text" name="amount" value="" placeholder="Enter Amount needed">
+			   </h4>
+			   <p>
+			       <input type="submit" name="submit" value="Add <?php echo $counter ?> to cart" class="btn btn-success">
+			   </p>
 				<!-- <input type="text" name="quantity" class="form-control" value="1"> -->
 				<input type="hidden" name="hidden_name" value="<?php echo $product['productName'] ?>">
 				<input type="hidden" name="hidden_price" value="<?php echo $product['unitPrice']?>">

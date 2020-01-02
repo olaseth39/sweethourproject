@@ -54,6 +54,7 @@ $_SESSION['total_page'];
 			 </div>		
 		</div>
      </div> 
+
 	 <script type="text/javascript" src="bootstrap/js/jquery.min.js"></script>
 	<script>
 		$(document).ready(function(){
